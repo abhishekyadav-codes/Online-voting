@@ -56,5 +56,33 @@
       </div>
     </form>
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const uniqueCode = "{{ unique_code }}";
+    const voteKey = "voted_" + uniqueCode;
+
+    // Agar already vote kiya hai
+    if (localStorage.getItem(voteKey)) {
+        disableVoting();
+    }
+
+    // Form submit hone pe
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function() {
+        localStorage.setItem(voteKey, "true");
+    });
+
+    function disableVoting() {
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach(btn => {
+            btn.disabled = true;
+            btn.style.opacity = "0.5";
+            btn.innerText = "Already Voted";
+        });
+    }
+
+});
+</script>
 </body>
 </html>

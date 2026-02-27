@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Voting System</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ==============================
+/* ==============================
    RESET & GLOBAL STYLES
 ============================== */
 *,
@@ -298,70 +290,3 @@ padding: 20px;
     font-size: 1rem;
   }
 }
-  </style> 
-  
-</head>
-<body>
-  <div id="splash">
-    Smart Voting System 
-  </div>
-  <div i="content">
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="logo">SVS</div>
-      <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a href="{% url 'index' %}">Home</a>
-        <a href="{% url 'aboutUs' %}">About</a>
-        <a href="{% url 'service' %}">Service</a>
-        <a href="{% url 'contactUs' %}">Contact</a>
-      </div>
-      <div class="actions">
-       
-        <a href="{% url 'home' %}" class="btn vote-button">Vote</a>
-
-        <a href="{% url 'registration' %}" class="btn glow-button">Register/Login</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main Section -->
-  <main>
-     <img src="https://dymk4s89vutua.cloudfront.net/wp-content/uploads/2024/07/online_voting.webp?x53102" alt="Smart Voting System Logo">
-    <p>Welcome to Smart Voting System</p>
-  </main>
-
-  <!-- About Section -->
-  <section class="about-section">
-    <h1>About Our System</h1>
-    <p>
-      Our Smart Voting System ensures transparency, security, and accessibility for all users. 
-      Designed with a user-friendly interface, it makes the voting process simple and reliable.
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-     {% include "footer.html" %}
-
-    <p>© 2025 Smart Voting System. All rights reserved.</p>
-  </footer>
-
-  <!-- Script -->
-  <script>
-    function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("active");
-      document.querySelector(".actions").classList.toggle("active");
-    }
-    setTimeout(() => {
-  document.getElementById('splash').style.display= 'none';
-
-  document.getElementById('content').style.display= 'block';
- }, 2000);
-  </script>
-  </div>
-</body>
-</html>

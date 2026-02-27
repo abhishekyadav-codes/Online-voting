@@ -20,7 +20,7 @@ from core import views   # apna app import karo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),   # index page
+    path('', views.index, name='index'),   # home page
     path('admin-form/', views.admin_form, name='admin_form'),
     path('add-candidate/', views.add_candidate, name='add_candidate'),
     path('voter-form/', views.voter_form, name='voter_form'),
@@ -29,6 +29,14 @@ urlpatterns = [
     path("thank-you/", views.thank_you, name="thank_you"),
     path("vote-counting/<str:unique_code>/", views.vote_counting, name="vote_counting"),
     path('results/<str:unique_code>/', views.results_page, name='results'),
+    path('readIntro/', views.readIntro, name='readIntro'),
+    path('aboutUs/', views.aboutUs, name='aboutUs'),
+    path('contactUs/', views.contactUs, name='contactUs'),
+    path('registration/', views.registration, name='registration'),
+    path('service/', views.service, name='service'),
+    path('service1/', views.service1, name='service1'),
+    path('home/', views.home, name='home'),
+    path('footer/', views.footer, name='footer'),
 
 
 

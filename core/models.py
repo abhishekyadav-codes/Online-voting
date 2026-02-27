@@ -42,6 +42,7 @@ class VotingTime(models.Model):
     seconds = models.IntegerField(default=0)
     is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    voting_active = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.hours}h {self.minutes}m {self.seconds}s - {'Active' if self.is_active else 'Inactive'}"
